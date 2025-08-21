@@ -2,12 +2,12 @@
 // Ganti dengan API Key Anda
 const NEWS_API_KEY = 'bc5dbdb0006f44129e174bd1a373a75f';
 const GNEWS_API_KEY = '0082211e3eaf8024bed6f8e4ecbd072e';
-const MEDIASTACK_API_KEY = '704bb299139cf17cd62970092bf31da4';
+// const MEDIASTACK_API_KEY = '704bb299139cf17cd62970092bf31da4';
 
 // URL untuk mengambil berita tentang AI (gunakan variabelnya)
 const url1 = `https://newsapi.org/v2/everything?q=artificial%20intelligence&apiKey=${NEWS_API_KEY}`;
 const url2 = `https://gnews.io/api/v4/search?q=artificial%20intelligence&token=${GNEWS_API_KEY}`;
-const url3 = `http://api.mediastack.com/v1/news?access_key=${MEDIASTACK_API_KEY}&keywords=artificial intelligence&limit=20`;
+// const url3 = `http://api.mediastack.com/v1/news?access_key=${MEDIASTACK_API_KEY}&keywords=artificial intelligence&limit=20`;
 // Tambahkan URL ketiga dari API pilihan Anda
 
 // Simpan semua artikel berita di sini
@@ -31,10 +31,10 @@ async function fetchAllNews() {
         const articlesFromGNews = data[1].articles ? data[1].articles.map(formatGNewsArticle) : [];
         
         // <-- BAGIAN YANG HILANG 1: Memproses data dari MediaStack
-        const articlesFromMediaStack = data[2].data ? data[2].data.map(formatMediaStackArticle) : [];
+        // const articlesFromMediaStack = data[2].data ? data[2].data.map(formatMediaStackArticle) : [];
         
         // <-- BAGIAN YANG HILANG 2: Menggabungkan KETIGA sumber berita
-        allArticles = [...articlesFromNewsAPI, ...articlesFromGNews, ...articlesFromMediaStack];
+        allArticles = [...articlesFromNewsAPI, ...articlesFromGNews,];
 
         // <-- PENYEMPURNAAN: Mengurutkan semua berita dari yang terbaru
         allArticles.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
