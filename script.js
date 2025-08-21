@@ -4,7 +4,7 @@ const GNEWS_API_KEY = '0082211e3eaf8024bed6f8e4ecbd072e';
 // const MEDIASTACK_API_KEY = '...'; // Nonaktif
 
 // URL yang sudah benar
-const url1 = `https://newsapi.org/v2/everything?q=artificial%20intelligence&apiKey=${NEWS_API_KEY}`;
+const url1 = `https://newsapi.org/v2/everything?q=artificial%20intelligence&pageSize=50&apiKey=${NEWS_API_KEY}`;
 const url2 = `https://gnews.io/api/v4/search?q=artificial%20intelligence&token=${GNEWS_API_KEY}`;
 // const url3 = `...`; // Nonaktif
 
